@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>協調作用｜生物協調島</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js"}}</script>
+</head>
+<body>
+  <div class="grain"></div><header class="topbar"><a class="brand" href="#top"><span class="brand-mark">🦦</span><span>協調島 <small>COORDINATION ARCHIPELAGO</small></span></a><nav><a href="#map">探索地圖</a><a href="#practice">會考練習</a><button id="themeBtn" class="icon-btn" aria-label="切換日夜模式">☾</button></nav></header>
+  <main id="top">
+    <section class="hero"><div class="hero-copy"><p class="eyebrow">BIOLOGY · UNIT 04</p><h1>讓訊息找到<br><em>正確的反應。</em></h1><p class="lead">沿著水獺船的航線，探索神經、荷爾蒙與生物感應如何協同工作。每座島都是一個可操作的學習站。</p><div class="hero-actions"><a class="primary" href="#map">開始探索 <span>↗</span></a><button id="resumeBtn" class="ghost">繼續上次進度</button></div><div class="micro-stats"><div><strong id="islandCount">0/4</strong><span>島嶼完成</span></div><div><strong id="quizCount">0</strong><span>題目答對</span></div><div><strong id="starCount">0</strong><span>星星收集</span></div></div></div><div class="hero-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="sun"></div><div class="hero-otter">🦦</div><div class="signal signal-1">✦</div><div class="signal signal-2">⌁</div><div class="signal signal-3">✺</div><div class="hero-label label-a">刺激</div><div class="hero-label label-b">整合</div><div class="hero-label label-c">反應</div></div></section>
+    <section id="map" class="map-section"><div class="section-heading"><div><p class="eyebrow">01 / FIELD MAP</p><h2>四座協調島</h2></div><div class="heading-note">點選島嶼進入課程<br><span>水獺船會依序巡航</span></div></div><div class="map-shell"><div id="threeMap" class="three-map" aria-label="協調作用 3D 島嶼地圖"></div><div class="map-fallback" id="mapFallback"><p>互動地圖載入中……</p></div><div class="route-line"></div><div id="islandPins" class="island-pins"></div><button id="resetView" class="map-control">↻ 重設視角</button><div class="boat-route"><div id="boat" class="boat">🦦<span class="boat-shape"></span></div></div></div><div class="location-list" id="locationList"></div></section>
+    <section class="progress-section"><div class="progress-card"><div><p class="eyebrow">YOUR FIELD LOG</p><h2>學習航海誌</h2><p id="progressText">探索島嶼、完成學習單，再解鎖證書。</p></div><div class="progress-ring"><svg viewBox="0 0 100 100"><circle class="ring-bg" cx="50" cy="50" r="42"/><circle id="ring" class="ring" cx="50" cy="50" r="42"/></svg><strong id="progressPct">0%</strong></div><button id="certificateBtn" class="secondary" disabled>查看證書</button></div></section>
+    <section id="practice" class="practice-section"><div class="section-heading"><div><p class="eyebrow">02 / EXAM DOCK</p><h2>會考題練習碼頭</h2></div><div class="heading-note">自編素養題<br><span>讀圖、推理、實驗設計</span></div></div><div class="practice-grid"><div class="practice-intro"><span class="big-number">05</span><h3>情境挑戰題</h3><p>把課本的協調作用放進生活情境。每題作答後會立即看到理由，答對可獲得航海星。</p><button id="startPractice" class="primary">開始練習 <span>→</span></button></div><div class="topic-cloud"><span>神經傳導</span><span>植物感應</span><span>負回饋</span><span>反射作用</span><span>實驗變因</span><span>跨系統整合</span></div></div></section>
+    <section class="daily-section"><div class="daily-card"><div class="daily-icon">✦</div><div><p class="eyebrow">DAILY KEY</p><h2>今日協調金句</h2><p id="dailyKey">「刺激不是終點，適當反應才是生物的生存策略。」</p></div><button id="newKey" class="icon-btn">↻</button></div></section>
+  </main>
+  <footer><span>協調島 · 國中自然學習站</span><span>內容依課本概念改寫｜題目標示為自編練習題</span></footer>
+  <div id="lessonModal" class="modal" hidden><div class="modal-panel lesson-panel"><button class="close" data-close="lessonModal">×</button><div id="lessonContent"></div></div></div>
+  <div id="practiceModal" class="modal" hidden><div class="modal-panel practice-panel"><button class="close" data-close="practiceModal">×</button><div id="practiceContent"></div></div></div>
+  <div id="certModal" class="modal" hidden><div class="modal-panel cert-panel"><button class="close" data-close="certModal">×</button><div class="certificate"><div class="cert-seal">✦</div><p class="eyebrow">CERTIFICATE OF COORDINATION</p><h2>協調作用探索者</h2><p>恭喜完成四座島嶼、學習單與隨堂測驗。</p><strong id="certName">生物學習者</strong><div class="cert-line"></div><small>協調島學習航海誌 · 2026</small></div><button id="printCert" class="primary">列印證書</button></div></div>
+  <script type="module" src="app.js"></script>
+</body></html>
