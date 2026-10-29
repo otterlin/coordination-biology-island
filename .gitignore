@@ -1,4 +1,12 @@
-../materials/
+# 本機與編輯器檔案
+.DS_Store
+Thumbs.db
+.vscode/
+
+# 不將原始教材、暫存檔或個人資料放入網站儲存庫
 *.pdf
+*.doc
 *.docx
 *.zip
+*.tmp
+
